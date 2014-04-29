@@ -10,7 +10,7 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  "ABSTRACT" => "the main module of the AnnualCal library",
+  "ABSTRACT" => "the main module of the AnnualCal distribution",
   "AUTHOR" => "Elliot Winston <exw\@cpan.org>",
   "BUILD_REQUIRES" => {},
   "CONFIGURE_REQUIRES" => {
@@ -32,7 +32,7 @@ my %WriteMakefileArgs = (
   "TEST_REQUIRES" => {
     "Test::More" => 0
   },
-  "VERSION" => "0.9",
+  "VERSION" => "0.91",
   "test" => {
     "TESTS" => "t/*.t"
   }

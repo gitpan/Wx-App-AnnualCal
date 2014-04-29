@@ -1,5 +1,5 @@
 ---
-abstract: 'the main module of the AnnualCal library'
+abstract: 'the main module of the AnnualCal distribution'
 author:
   - 'Elliot Winston <exw@cpan.org>'
 build_requires:
@@ -20,4 +20,4 @@ requires:
   Wx::App: 0
   Wx::Grid: 0
   perl: 5.010
-version: 0.9
+version: 0.91

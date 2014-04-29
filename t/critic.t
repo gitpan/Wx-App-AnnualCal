@@ -15,4 +15,5 @@ use warnings;
 use Test::Perl::Critic;
 
 Test::Perl::Critic->import(-profile=>'perlcritic.rc') if (-f 'perlcritic.rc');
+
 all_critic_ok();

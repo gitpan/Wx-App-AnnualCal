@@ -1,4 +1,4 @@
-package MyFrame;
+package Wx::App::AnnualCal::MyFrame;
 
 use strict;
 use warnings;
@@ -12,7 +12,8 @@ use base qw(Wx::Frame);
 use Date::Calc 6.3 qw(Today Month_to_Text);
 use Readonly 1.03;
 
-use MonthSizer;
+use lib qw(../../../../lib);
+use Wx::App::AnnualCal::MonthSizer;
 
           ##################################################
 
@@ -171,7 +172,7 @@ sub build
   my $panel = $self->{param}->{panel};
   my $year = $self->{param}->{year};
 
-  my $ms = MonthSizer->new($self->{param});
+  my $ms = Wx::App::AnnualCal::MonthSizer->new($self->{param});
 
   my $gridsizer = Wx::GridSizer->new(3,4,0,0);
   map { $gridsizer->Add($ms->getmonthsizer($_)) } (0..11);
@@ -205,7 +206,7 @@ sub update
   {
   my $self = shift;
 
-  my $ms = MonthSizer->new($self->{param});
+  my $ms = Wx::App::AnnualCal::MonthSizer->new($self->{param});
 
   my $gridsizer = Wx::GridSizer->new(3,4,0,0);
   map { $gridsizer->Add($ms->getmonthsizer($_)) } (0..11);
@@ -307,7 +308,7 @@ sub ClickANY
 #
 # * * *
 
-#ABSTRACT: a module in the AnnualCal library
+#ABSTRACT: a module in the AnnualCal distribution
 
 1;
 
@@ -316,11 +317,11 @@ __END__
 
 =head1 NAME
 
-MyFrame - a module in the AnnualCal library
+Wx::App::AnnualCal::MyFrame - a module in the AnnualCal distribution
 
 =head1 VERSION
 
-version 0.9
+version 0.91
 
 =head1 SYNOPSIS
 
@@ -331,7 +332,7 @@ Package which defines, lays out, and maintains the widgets in the GUI.
 =head2 new
 
 Constructor defining all the GUI parameters and basic widgets,
-and builds the 'lower sizer' (see L<AnnualCal/DESIGN>).
+and builds the 'lower sizer' (see L<Wx::App::AnnualCal/DESIGN>).
 
 =head2 build
 
@@ -341,7 +342,7 @@ inserted into the panel and frame for display.
 =head2 update
 
 Method which responds to a user request for a new year
-by getting a new 'upper sizer' (see L<AnnualCal/DESIGN>),
+by getting a new 'upper sizer' (see L<Wx::App::AnnualCal/DESIGN>),
 and replacing the old one.
 Also, the display of the numeric new year is updated in the 'lower sizer'.
 

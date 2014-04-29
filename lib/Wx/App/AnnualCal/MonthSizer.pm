@@ -1,4 +1,4 @@
-package MonthSizer;
+package Wx::App::AnnualCal::MonthSizer;
 
 use strict;
 use warnings;
@@ -140,7 +140,7 @@ sub getmonthsizer
 #
 # * * *
 
-#ABSTRACT: a module in the AnnualCal library
+#ABSTRACT: a module in the AnnualCal distribution
 
 1;
 
@@ -149,11 +149,11 @@ __END__
 
 =head1 NAME
 
-MonthSizer - a module in the AnnualCal library
+Wx::App::AnnualCal::MonthSizer - a module in the AnnualCal distribution
 
 =head1 VERSION
 
-version 0.9
+version 0.91
 
 =head1 SYNOPSIS
 
@@ -170,7 +170,7 @@ data describing the days of each month of the year.
 =head2 getmonthsizer
 
 Method which creates and returns the 'upper sizer' which displays the calendar
-for the desired year (see L<AnnualCal/DESIGN>).
+for the desired year (see L<Wx::App::AnnualCal/DESIGN>).
 
 =head1 AUTHOR
 

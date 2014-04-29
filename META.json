@@ -1,5 +1,5 @@
 {
-   "abstract" : "the main module of the AnnualCal library",
+   "abstract" : "the main module of the AnnualCal distribution",
    "author" : [
       "Elliot Winston <exw@cpan.org>"
    ],
@@ -36,6 +36,6 @@
       }
    },
    "release_status" : "stable",
-   "version" : "0.9"
+   "version" : "0.91"
 }
 

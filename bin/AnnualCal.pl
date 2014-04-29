@@ -4,10 +4,13 @@ use strict;
 use warnings;
 
 use FindBin qw($Bin);
-use lib ("$Bin/../lib/Wx/App", "$Bin/../lib/Wx/App/AnnualCal");
-use AnnualCal;
+use lib ("$Bin/../lib");
+use Wx::App::AnnualCal;
+use Wx::App::AnnualCal::MyFrame;
 
-AnnualCal->new()->MainLoop();
+#my $ref = Wx::App::AnnualCal->new();
+#$ref->MainLoop();
+Wx::App::AnnualCal->new()->MainLoop();
 
 #PODNAME: AnnualCal.pl - driver script for the AnnualCal application.
 
@@ -22,13 +25,13 @@ AnnualCal.pl - driver script for the AnnualCal application.
 
 =head1 VERSION
 
-version 0.9
+version 0.91
 
 =head1 SYNOPSIS
 
-C<use AnnualCal;>
+C<use Wx::App::AnnualCal;>
 
-C<AnnualCal-E<gt>new()-E<gt>MainLoop();>
+C<Wx::App::AnnualCal-E<gt>new()-E<gt>MainLoop();>
 
 =head1 AUTHOR
 

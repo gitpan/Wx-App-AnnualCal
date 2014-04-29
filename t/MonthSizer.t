@@ -9,8 +9,8 @@ use Test::More;
 use Date::Calc qw(Day_of_Week Month_to_Text);
 use Wx qw(:font);
 
-use lib qw(lib/Wx/App lib/Wx/App/AnnualCal);
-use AnnualCal;
+use lib qw(../lib);
+use Wx::App::AnnualCal::MonthSizer;
 
 my $param = init();
 
@@ -18,8 +18,8 @@ while (my $row = <DATA>)
   {
   my ($year, $month, $day) = split(/\s+/x, $row);
   $param->{'year'} = $year;
-  my $ms = MonthSizer->new($param);
-  isa_ok($ms, 'MonthSizer', '$ms');
+  my $ms = Wx::App::AnnualCal::MonthSizer->new($param);
+  isa_ok($ms, 'Wx::App::AnnualCal::MonthSizer', '$ms');
   my $months = $ms->{months};
   isa_ok($months, 'ARRAY', '$months');
   my $col = $months->[$month-1]->{days}->[$day]->{col};

@@ -16,22 +16,22 @@ use DirHandle;
 use File::Basename;
 
 use Test::More;
-use lib qw(lib/Wx/App lib/Wx/App/AnnualCal);
 
 use_ok('Pod::Coverage');
 
 my %modules;
 
-my $lib = './lib';
-
-recur($lib);
+chdir('./lib');
+recur('Wx/App');
 
 foreach my $path (keys %modules)
   {
   foreach my $mod (@{$modules{$path}})
     {
-    my $name = basename($mod, ('.pm'));
-    my $checker = Pod::Coverage->new(package => $name);
+    my $base = basename($mod, ('.pm'));
+    my $pkg = "$path/$base";
+    $pkg =~ s/\//::/g;
+    my $checker = Pod::Coverage->new(package => $pkg);
     my $rating = $checker->coverage();
     if (defined($rating))
       {

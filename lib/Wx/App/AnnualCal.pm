@@ -1,30 +1,32 @@
-package AnnualCal;
+package Wx::App::AnnualCal;
 
 use strict;
 use warnings;
 
 use Wx 0.990 qw(:frame);
 use base qw(Wx::App);
-use lib qw(./AnnualCal);
 
-my $VERSION = 0.90;
+use lib qw(../../../lib);
+use Wx::App::AnnualCal::MyFrame;
 
-use MyFrame;
+my $VERSION = 0.91;
 
           ##################################################
 
 sub OnInit
   {
-  my $frame = MyFrame->new(undef,                  # parent window
-                           -1,                     # default id value
-                           'Annual Calendar',      # title
-                           [-1,-1],                # default position
-                           [-1,-1],                # default size
-                           wxDEFAULT_FRAME_STYLE,  # frame style
-                          );
-  $frame->build();                                 # creates calendar
-  $frame->Center(wxBOTH);                          # center frame on screen
-  $frame->Show(1);                                 # displays calendar
+  my $frame = Wx::App::AnnualCal::MyFrame->new
+    (
+     undef,                                 # parent window
+     -1,                                    # default id value
+     'Annual Calendar',                     # title
+     [-1,-1],                               # default position
+     [-1,-1],                               # default size
+     wxDEFAULT_FRAME_STYLE,                 # frame style
+    );                                   
+  $frame->build();                          # creates calendar
+  $frame->Center(wxBOTH);                   # center frame on screen
+  $frame->Show(1);                          # displays calendar
 
   return(1);
   }
@@ -35,7 +37,7 @@ sub OnInit
 #
 # * * *
 
-#ABSTRACT: the main module of the AnnualCal library
+#ABSTRACT: the main module of the AnnualCal distribution
 
 
 1;
@@ -46,11 +48,11 @@ __END__
 
 =head1 NAME
 
-AnnualCal - the main module of the AnnualCal library
+Wx::App::AnnualCal - the main module of the AnnualCal distribution
 
 =head1 VERSION
 
-version 0.9
+version 0.91
 
 =head1 SYNOPSIS
 
