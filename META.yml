@@ -20,4 +20,4 @@ requires:
   Wx::App: 0
   Wx::Grid: 0
   perl: 5.010
-version: 0.91
+version: 0.92

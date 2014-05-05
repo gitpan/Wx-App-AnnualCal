@@ -9,7 +9,7 @@ use base qw(Wx::App);
 use lib qw(../../../lib);
 use Wx::App::AnnualCal::MyFrame;
 
-my $VERSION = 0.91;
+my $VERSION = 0.92;
 
           ##################################################
 
@@ -52,7 +52,7 @@ Wx::App::AnnualCal - the main module of the AnnualCal distribution
 
 =head1 VERSION
 
-version 0.91
+version 0.92
 
 =head1 SYNOPSIS
 

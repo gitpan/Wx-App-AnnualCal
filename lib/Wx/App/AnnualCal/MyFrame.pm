@@ -321,7 +321,7 @@ Wx::App::AnnualCal::MyFrame - a module in the AnnualCal distribution
 
 =head1 VERSION
 
-version 0.91
+version 0.92
 
 =head1 SYNOPSIS
 
